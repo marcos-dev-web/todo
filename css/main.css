@@ -28,6 +28,7 @@ body {
   background-color: white;
   box-shadow: 0 1px 10px 5px rgba(0,0,0,.1);
   height: var(--height-pad-top);
+  z-index: 100;
 }
 
 .header__main .wrapper {
@@ -214,8 +215,31 @@ body {
   color: whitesmoke;
 }
 
+@media screen and (max-height: 360px) {
+  .content__main {
+    height: 50vh;
+  }
+
+  .todo_list {
+    height: 150px;
+  }
+}
+
 @media screen and (max-width: 350px) {
+
   .header__title {
     font-size: 25px;
+  }
+}
+
+@media screen and (max-height: 310px) {
+  .todo_list {
+    height: 40vh;
+  }
+}
+
+@media screen and (max-height: 270px) {
+  .todo_list {
+    max-height: 30vh;
   }
 }
