@@ -149,6 +149,7 @@ body {
   height: 100%;
   list-style: none;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .item_todo {
@@ -158,6 +159,8 @@ body {
   justify-content: space-between;
   align-items: center;
   background: rgba(127, 140, 141,1.0);
+  transition: 150ms;
+  transform-origin: left;
 }
 
 .item_todo:not(:first-child) {

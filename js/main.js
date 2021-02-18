@@ -41,9 +41,14 @@ const todo = {
     todoContainer.appendChild(todo);
   },
   remove(todoDiv) {
-    const parent = todoDiv.parentNode;
-    parent.removeChild(todoDiv);
-    todo.minCounter()
+    todoDiv.style.transform = 'rotate(10deg)';
+    todoDiv.style.opacity = '0.5';
+    todoDiv.style.left = '10px';
+    setTimeout(() => {
+      const parent = todoDiv.parentNode;
+      parent.removeChild(todoDiv);
+      todo.minCounter()
+    }, 250)
   },
   plusCounter() {
     const divNumber = document.querySelector('#tot_number');
